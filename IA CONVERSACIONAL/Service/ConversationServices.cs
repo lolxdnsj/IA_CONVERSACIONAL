@@ -1,7 +1,6 @@
-﻿using IA_CONVERSACIONAL.AI;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
-namespace IA_CONVERSACIONAL.Service
+namespace IA_CONVERSACIONAL
 {
     public class ConversationServices
     {

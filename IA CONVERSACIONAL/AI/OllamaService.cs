@@ -3,11 +3,12 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace IA_CONVERSACIONAL.AI
+namespace IA_CONVERSACIONAL
 {
     public class OllamaService
     {
         private readonly HttpClient _httpClient;
+
         public OllamaService()
         {
             _httpClient = new HttpClient();
@@ -21,12 +22,11 @@ namespace IA_CONVERSACIONAL.AI
                 stream = false
             };
             var json = JsonSerializer.Serialize(requestData);
-            var content = new StringContent(json, Econding.UTF8, "application/json");
-            var response 0 await _httpClient.PostAsync("http://localhost:11434/api/generate", content)
-            var responseString = await response.Content.ReadAsStrungAsync();
-
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            var response = await _httpClient.PostAsync("http://localhost:11434/api/generate", content);
+            var responseString = await response.Content.ReadAsStringAsync();
             using var doc = JsonDocument.Parse(responseString);
             return doc.RootElement.GetProperty("response").GetString();
         }
-    }    
+    }
 }

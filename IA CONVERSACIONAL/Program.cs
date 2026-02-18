@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Threading.Tasks;
-using IA_CONVERSACIONAL.Service;
 
 namespace IA_CONVERSACIONAL
 {
