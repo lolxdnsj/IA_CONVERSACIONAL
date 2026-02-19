@@ -46,6 +46,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\ConversationServices.cs" />
+	<Compile Include="AI\OllamaService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
